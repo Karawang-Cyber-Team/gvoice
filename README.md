@@ -15,7 +15,7 @@ A collection of simple python mini projects to enhance your Python skills.
 
 If you want to learn about python, visit [here.](https://github.com/Python-World/Py-Resources)
 
-#### About Tools
+#### About Gvoice
 ###### Gvoice is made with python programming. You will find it easy to use this tool using an android/computer, with a terminal and gtts library module. The purpose of this tool is to make it easier for you, in making artificial sounds, how to use it is also very easy, you just choose what language you want to make sound. Then the program will automatically run according to the command. If you have just typed text, and the program will convert the text into voice language and automatically the voice.mp3 file will be saved to Android's internal memory. For the country's language, there are only 10 languages, next time it will be updated. Oh yes, this program has been specially designed and tested for security, in order to avoid unwanted ones.
 ##### Install the module to run this tool
 - pip install gtts
