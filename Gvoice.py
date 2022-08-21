@@ -57,7 +57,7 @@ def picture (clr, color_):
 (3) Voice Arabian     (8) Voice Uzbekistan
 (4) Voice Albania     (9) Voice Yaman
 (5) Voice Japan       (10) Voice Brazil 
-(11) Voice Bambara"""
+(11) Voice Bambara    (00) Exit"""
 def Animation(txt):
     for i in txt:
         st.write(i)
@@ -95,12 +95,18 @@ class Voice:
 def PROGRAMMER_TURU():
     colors(); Animation(f"\n{color_[2]}enter your choice{clr[0]} ")
     count = input("\t: ")
-    if count == "1": coun = "id";elif count == "2": coun = "en"
-    elif count == "3": coun = "ar";elif count == "4": coun = "al"
-    elif count == "5": coun = "ja";elif count == "6": coun = "af"
-    elif count == "7": coun = "my";elif count == "8": coun = "us"
-    elif count == "9": coun = "ye";elif count == "10": coun = "br"
+    if count == "1": coun = "id"
+    elif count == "2": coun = "en"
+    elif count == "3": coun = "ar"
+    elif count == "4": coun = "al"
+    elif count == "5": coun = "ja"
+    elif count == "6": coun = "af"
+    elif count == "7": coun = "my"
+    elif count == "8": coun = "us"
+    elif count == "9": coun = "ye"
+    elif count == "10": coun = "br"
     elif count == "11": coun = "bm"
+    elif count == "00": exit()
     Animation(f"{color_[2]}enter the message{clr[0]} ")
     msg = input("\t: ")
     x = Voice(msg, coun).voicer(); print ("")
