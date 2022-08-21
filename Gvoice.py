@@ -5,203 +5,117 @@
 # FOLLOW MY GITHUB AND STARS MY REPOSITORY BRO :)
 # THANXS TO MY TEAM : KARAWANG CYBER TEAM AND PYTHON TEAM OPEN SOURCE
 
-#usr/bin/python3
-import os, sys, time, requests
-from gtts import gTTS
+#!user/bin/python3.10
+#encoding:utf-8
+"SCRIPT INI MERUPAKAN PENGEMBANGAN DARI SCRIPT BUATAN"
+"MR. TRUEFALSE"
+import os, sys
+from sys import stdout as st
+from time import sleep
+from os import system as shell
+from random import uniform as unif, choice as ch
+def clear(): #cleaning the terminal
+    if os.name == "nt":
+        shell("cls")
+    else:
+        shell("clear")
+#checking modulee        
+try:
+    import rich, requests
+    from rich.panel import Panel
+    from gtts import gTTS
+    from io import BytesIO as BIO
+except ModuleNotFoundError:
+    clear()
+    print ("installing modules..")
+    print ("please waiting for a minutes.."); sleep(1)
+    shell("python3 -m pip install requests rich gtts gTTS ")
+    clear()
+    print ("done!"); sleep(1)
+# okay we start to coding! mangatse..
+def picture (clr, color_):
+    return f"""
+        [default][on black red]  ______    ____   ____        _                     [not on black]
+        [on black red].' ___  |  |_  _| |_  _|      (_)                    [not on black]
+        [on black green]/ .'   \_|  \ \   / / .--.   __   .---.  .---.       [not on black]
+        [on black green]| |   ____   \ \ / // .'`\ \[  | / /'`\]/ /__\\      [not on black]
+        [on black blue] `.___]  |   \ ' / | \__. | | | | \__. | \__.,      [not on black]
+        [on black blue]`._____.'      \_/   '.__.' [___]'.___.' '.__.'      [not on black]
+        [default]-------------------------------------------------    [not on black]
+        [red] Author : [italic white]True False[not italic]
+        [red] FB     : [italic white]true false        [not italic]
+        [red] github : [italic white]github.com/TrueFalseID    [not italic]
+        [red] Team   : [italic white]None                              [not italic]
 
-## PLEASE NO EDIT AUTHOR NAME!!
-author = 'True False'
-fb = 'True False'
-github = 'github.com/TrueFalseID'
+            [default][on red]*editing by Ahmad Adptr [on black]
+        -------------------------------------------------
+        [bold blue]  >> [default]KETIK [bold italic green]HELP [default not italic] UNTUK MELIHAT CARA PENGUNAAN TOOLS [bold blue]<<
+        [bold blue]  >> [default]    [underline]KETIK BUG UNTUK MELAPORKAN BUG TOOLS[not underline]      [bold blue]<<[default]
 
-def mengetik(TrueFalseID):
-    for im in TrueFalseID + '\n':
-        sys.stdout.write(im)
-        sys.stdout.flush()
-        time.sleep(00.03) 
-        
-P = '\x1b[1;97m' # PUTIH
-M = '\x1b[1;91m' # MERAH
-H = '\x1b[1;92m' # HIJAU
-a = '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m]'
-b = '\x1b[1;97m[\x1b[1;91m?\x1b[1;97m]'
-c = '\x1b[1;97m[\x1b[1;91m•\x1b[1;97m]'
-
-def baner():
-  print(f"""
-\x1b[31m  ______    ____   ____        _
-\x1b[31m.' ___  |  |_  _| |_  _|      (_)
-\x1b[33m/ .'   \_|    \ \   / / .--.   __   .---.  .---.
-\x1b[32m| |   ____     \ \ / // .'`\ \[  | / /'`\]/ /__\\
-\x1b[32m\ `.___]  |     \ ' / | \__. | | | | \__. | \__.,
-\x1b[34m `._____.'       \_/   '.__.' [___]'.___.' '.__.'
-{c}-------------------------------------------------{c}
-{c} Author : {author}                             {c}
-{c} FB     : {fb}                             {c}
-{c} github : {github}                 {c}
-{c} Team   : Karawang Cyber Team                    {c}
-{c}-------------------------------------------------{c}
-{M}  >> {P}KETIK {M}HELP {P}UNTUK MELIHAT CARA PENGUNAAN TOOLS {M}<<
-{M}  >>     {P}KETIK {M}BUG {P}UNTUK MELAPORKAN BUG TOOLS      {M}<<
-  """)
-def menu():
-  os.system('clear');baner()
-  mengetik(f"""\x1b[1;97m[\x1b[1;91m01\x1b[1;97m] Voice indonesia \x1b[1;97m[\x1b[1;91m02\x1b[1;97m] Voice inggris\n\x1b[1;97m[\x1b[1;91m03\x1b[1;97m] Voice arab      \x1b[1;97m[\x1b[1;91m04\x1b[1;97m] Voice albania\n\x1b[1;97m[\x1b[1;91m05\x1b[1;97m] Voice Jepang    \x1b[1;97m[\x1b[1;91m06\x1b[1;97m] Voice amhara\n\x1b[1;97m[\x1b[1;91m07\x1b[1;97m] Voice armenia   \x1b[1;97m[\x1b[1;91m08\x1b[1;97m] Voice assam\n\x1b[1;97m[\x1b[1;91m09\x1b[1;97m] Voice aymara    \x1b[1;97m[\x1b[1;91m10\x1b[1;97m] Voice azerbaijan\n\x1b[1;97m[\x1b[1;91m00\x1b[1;97m] Exit
-  """)
-  udud = input(f'{b} Choice >>: ')
-  if udud in ['']:
-      print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if udud in ['00']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');os.system('xdg-open https://github.com/TrueFalseID')
-  if udud in ['help','HELP','ikehikeh','kimochisayang']:
-   time.sleep(2);os.system('clear')
-   print('\n\n')
-   mengetik(f'{M}>> {P}CARA PENGGUNAAN TOOLS INI! {M}<<\n')
-   mengetik(f'{M}>> {P}KETIK TEXT YANG INGIN MAU BUAT VOICE {M}<<')
-   mengetik(f'{M}>> {P}SETELAH SELESAI MENGETIKAN TEXT LALU KLIK ENTER {M}<<')
-   mengetik(f'{M}>> {P}KALO SUDAH DI ENTER OTOMATIS PROGRAM BAKAL MENCONVERT TEXT KE VOICE.MP3 {M}<<');time.sleep(7);exit()
-  if udud in ['bug','BUG']:
-    time.sleep(2);os.system('xdg-open https://wa.me/+6285810753481')
-  if udud in ['1','01']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='id', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    kasep = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if kasep in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if kasep in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if kasep in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-    
-  if udud in ['2','02']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='en', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    geulis = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if geulis in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if geulis in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if geulis in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-  
-  if udud in ['3','03']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='af', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    ganteng = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if ganteng in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if ganteng in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if ganteng in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-    
-  if udud in ['4','04']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='tl', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    cantik = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if cantik in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if cantik in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if cantik in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-    
-  if udud in ['5','05']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='ja', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    cantik = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if cantik in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if cantik in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if cantik in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-    
-  if udud in ['6','06']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='am', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    ikehikeh = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if ikehikeh in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if ikehikeh in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if ikehikeh in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-    
-  if udud in ['7','07']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='hy', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    ewewe = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if ewewe in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if ewewe in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if ewewe in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-    
-  if udud in ['8','08']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='as', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    memek = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if memek in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if memek in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if memek in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-    
-  if udud in ['9','09']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='ay', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    kontol = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if kontol in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if kontol in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if kontol in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-    
-  if udud in ['10']:
-    os.system('clear');baner()
-    spet = input(f'{P}Enter Text To Spech : ')
-    speech = gTTS(text=spet, lang='az', slow=False)
-    speech.save('voice.mp3');time.sleep(3)
-    mengetik(f'\n{H}Success file saved!{P}')
-    kopienak = input(f'{b} INGIN MENCOBA YANG LAIN Y/N :')
-  if kopienak in ['']:
-    print(f'{a} \x1b[1;91mPlease input your menu{P}');time.sleep(2);os.system('clear');menu()
-  if kopienak in ['y','ya','YA','yes','YES']:
-    time.sleep(1);os.system('clear');baner();menu()
-  if kopienak in ['n','N','no','NO','na','NI']:
-    time.sleep(2);mengetik(f'{P}Thanxs using my tools bro. please follow and stars my repository:)');exit()
-  
-    
-if __name__ == '__main__':
-  menu()
+(1) Voice Indonesian  (6) Voice Afghanistan
+(2) Voice English     (7) Voice Malaysia
+(3) Voice Arabian     (8) Voice Uzbekistan
+(4) Voice Albania     (9) Voice Yaman
+(5) Voice Japan       (10) Voice Brazil 
+(11) Voice Bambara"""
+def Animation(txt):
+    for i in txt:
+        st.write(i)
+        st.flush()
+        sleep(round(unif(0.03,0.01),2))
+def colors():
+    global clr, color_
+    # [0] = default         [6] = cyan
+    # [1] = red             [7] = white   
+    # [2] = green           [8] = black
+    # [3] = yellow
+    # [4] = blue
+    # [5] = Magenta/pink
+    clr = [   "\x1b[0m",      "\x1b[31;1m",   "\x1b[32;1m",  
+                "\x1b[33;1m",   "\x1b[34;1m",   "\x1b[35;1m",
+                "\x1b[36;1m",   "\x1b[37;1m",   "\x1b[30;1m"    ]
+    color_ = [  "\x1b[44;1m",   "\x1b[41;1m",   "\x1b[40;1m"    ]
+def design():
+    clear(); colors()
+    rich.print(Panel(Panel(picture(clr,color_),style="on black"),style="on white"))
+class Voice:
+    def __init__(self, msg, country) -> str:
+        self.coun = country
+        self.file = "voice"
+        self.msg = msg    
+    def voicer(self):
+        try:
+            get = gTTS(self.msg, lang=self.coun, slow=False)
+        except:
+            rich.print(Panel("(!) sistem tidak support",style="red"))
+            sys.exit(0)
+        with open(self.file + f"_{self.coun}.mp3", "wb") as f:
+            get.write_to_fp(f)
+        return "sukses to save file " + self.file + "_{self.coun}.mp3"
+def PROGRAMMER_TURU():
+    colors(); Animation(f"\n{color_[2]}enter your choice{clr[0]} ")
+    count = input("\t: ")
+    if count == "1": coun = "id";elif count == "2": coun = "en"
+    elif count == "3": coun = "ar";elif count == "4": coun = "al"
+    elif count == "5": coun = "ja";elif count == "6": coun = "af"
+    elif count == "7": coun = "my";elif count == "8": coun = "us"
+    elif count == "9": coun = "ye";elif count == "10": coun = "br"
+    elif count == "11": coun = "bm"
+    Animation(f"{color_[2]}enter the message{clr[0]} ")
+    msg = input("\t: ")
+    x = Voice(msg, coun).voicer(); print ("")
+    rich.print(Panel(x, style="bold yellow"))
+    shell(f"xdg-open voice_{coun}.mp3")
+    def REUSE():
+        try:
+            y = input(f"{clr[0]}try again?[y/n] ")
+            if y == "y":
+                PROGRAMMER_TURU()
+            else:
+                sys.exit("\n[program finshed]\n")
+        except KeyboardInterrupt: print ("{}jangan menekan ctrl+c").format(clr[1]); REUSE()
+        except EOFError: print ("{}jangan menekan ctrl+d").format(clr[1]);REUSE()
+    REUSE()
+if __name__ == "__main__":
+    design()  
+    PROGRAMMER_TURU()
