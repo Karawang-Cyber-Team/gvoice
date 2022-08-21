@@ -48,5 +48,5 @@ No   | Language | kode
 <p align="center"> Follow by
 <a href="https://www.facebook.com/may.quen.7547">@Author</a>
 </p>
-<p align="center"> Design by : Ahmad</p>
+<p align="center"> Design by : Ahmad adptr</p>
 <p align="center">Thanxs To AllMember<a href="https://www.facebook.com/1454241774848282">@Karawang Cyber Team</a></p>
