@@ -30,20 +30,7 @@ https://github.com/TrueFalseID/gvoice
 
 ###### Maybe that's all, if there's a mistake please forgive me, I'm just a young man who is thirsty for knowledge. Thank you so much for using this tool🙏
 ###### Don't forget to give a star and follow my github :)
-## Language features ✨
-
-No   | Language | kode
---- | --- | --- |
-1 | Indonesia | id
-2 | Inggris | en
-3 | Arab | af
-4 | Albania | tl
-5 | Jepang | ja
-6 | Amhara | am
-7 | Arnemia | hy
-8 | AssAm | as
-9 | Aymara | ay
-10 | Azerbaijan | az
+## Language features :
 
 <p align="center"> Follow by
 <a href="https://www.facebook.com/may.quen.7547">@Author</a>
