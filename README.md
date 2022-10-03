@@ -31,6 +31,7 @@ https://github.com/TrueFalseID/gvoice
 ###### Maybe that's all, if there's a mistake please forgive me, I'm just a young man who is thirsty for knowledge. Thank you so much for using this tool🙏
 ###### Don't forget to give a star and follow my github :)
 ## Language features :
+![IMG_20221003_222835](https://user-images.githubusercontent.com/99103722/193616590-83d3f116-2c37-4832-a5ee-c5b911517db1.jpg)
 
 <p align="center"> Follow by
 <a href="https://www.facebook.com/may.quen.7547">@Author</a>
