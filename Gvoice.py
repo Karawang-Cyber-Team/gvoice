@@ -1,14 +1,11 @@
-# APABILA ADA YANG RE UPLOAD SC INI TANPA SEIZIN AUTHOR ASLI MOHON LAPORKAN SAYA VIA FB ATAU WA SAYA !!
+# APABILA ADA YANG RE UPLOAD SC INI TANPA SEIZIN AUTHOR ASLI MOHON LAPORKAN SAYA VIA FB ATAU WA SAYA. Terima Kasih!!
 # WA   : 085810753481
 # FB   : True False
 # INGIN BEKERJA SAMA MEMBUAT PROJECT?? WA/FB ME.
 # FOLLOW MY GITHUB AND STARS MY REPOSITORY BRO :)
 # THANXS TO MY TEAM : KARAWANG CYBER TEAM AND PYTHON TEAM OPEN SOURCE
-
 #!user/bin/python3.10
-#encoding:utf-8
-"SCRIPT INI MERUPAKAN PENGEMBANGAN DARI SCRIPT BUATAN"
-"MR. TRUEFALSE"
+
 import os, sys
 from sys import stdout as st
 from time import sleep
@@ -47,7 +44,6 @@ def picture (clr, color_):
         [red] github : [italic white]github.com/TrueFalseID    [not italic]
         [red] Team   : [italic white]None                              [not italic]
 
-            [default][on red]*editing by Ahmad Adptr [on black]
         -------------------------------------------------
         [bold blue]  >> [default]KETIK [bold italic green]HELP [default not italic] UNTUK MELIHAT CARA PENGUNAAN TOOLS [bold blue]<<
         [bold blue]  >> [default]    [underline]KETIK BUG UNTUK MELAPORKAN BUG TOOLS[not underline]      [bold blue]<<[default]
@@ -57,7 +53,9 @@ def picture (clr, color_):
 (3) Voice Arabian     (8) Voice Uzbekistan
 (4) Voice Albania     (9) Voice Yaman
 (5) Voice Japan       (10) Voice Brazil 
-(11) Voice Bambara    (00) Exit"""
+(11) Voice Bambara    (12) Voice Basque
+(13) Voice Belanda    (14) Voice BellaRusia
+(15) Voice Bengali    (00) Exit"""
 def Animation(txt):
     for i in txt:
         st.write(i)
@@ -106,6 +104,10 @@ def PROGRAMMER_TURU():
     elif count == "9": coun = "ye"
     elif count == "10": coun = "br"
     elif count == "11": coun = "bm"
+    elif count == "12": coun = "eu"
+    elif count == "13": coun = "nl"
+    elif count == "14": coun = "be"
+    elif count == "15": coun = "bn"
     elif count == "00": exit()
     Animation(f"{color_[2]}enter the message{clr[0]} ")
     msg = input("\t: ")
