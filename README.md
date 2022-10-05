@@ -5,11 +5,11 @@
 ### Python Gvoice project
 
 [![All Contributors](https://img.shields.io/github/contributors/TrueFalseID/indoxtool)](#contributors-)
-![Issues](https://img.shields.io/github/issues/TrueFalseID/indoxtool)
-![Pull Requests](https://img.shields.io/github/issues-pr/TrueFalseID/indoxtool?)
-![Forks](https://img.shields.io/github/forks/TrueFalseID/indoxtool)
-![Stars](https://img.shields.io/github/stars/TrueFalseID/indoxtool)
-![License](https://img.shields.io/github/license/TrueFalseID/indoxtool)
+![Issues](https://img.shields.io/github/issues/TrueFalseID/gvoice)
+![Pull Requests](https://img.shields.io/github/issues-pr/TrueFalseID/gvoice?)
+![Forks](https://img.shields.io/github/forks/TrueFalseID/gvoice)
+![Stars](https://img.shields.io/github/stars/TrueFalseID/gvoice)
+![License](https://img.shields.io/github/license/TrueFalseID/gvoice)
 
 A collection of simple python mini projects to enhance your Python skills.
 
