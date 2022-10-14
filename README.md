@@ -1,3 +1,6 @@
+
+![IMG_20221014_185249](https://user-images.githubusercontent.com/99103722/195841177-b3dda8d4-2058-4bfd-9cba-b93b6bef202c.jpg)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://github.com/TrueFalseID)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org)
@@ -30,11 +33,8 @@ https://github.com/TrueFalseID/gvoice
 
 ###### Maybe that's all, if there's a mistake please forgive me, I'm just a young man who is thirsty for knowledge. Thank you so much for using this tool🙏
 ###### Don't forget to give a star and follow my github :)
-## Language features :
-![IMG_20221003_222835](https://user-images.githubusercontent.com/99103722/193616590-83d3f116-2c37-4832-a5ee-c5b911517db1.jpg)
 
 <p align="center"> Follow by
 <a href="https://www.facebook.com/may.quen.7547">@Author</a>
 </p>
-<p align="center"> Design by : Ahmad adptr</p>
 <p align="center">Thanxs To AllMember<a href="https://www.facebook.com/1454241774848282">@Karawang Cyber Team</a></p>
