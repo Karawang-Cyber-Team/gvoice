@@ -11,6 +11,7 @@ from sys import stdout as st
 from time import sleep
 from os import system as shell
 from random import uniform as unif, choice as ch
+
 def clear(): #cleaning the terminal
     if os.name == "nt":
         shell("cls")
@@ -48,14 +49,22 @@ def picture (clr, color_):
         [bold blue]  >> [default]KETIK [bold italic green]HELP [default not italic] UNTUK MELIHAT CARA PENGUNAAN TOOLS [bold blue]<<
         [bold blue]  >> [default]    [underline]KETIK BUG UNTUK MELAPORKAN BUG TOOLS[not underline]      [bold blue]<<[default]
 
-(1) Voice Indonesian  (6) Voice Afghanistan
-(2) Voice English     (7) Voice Malaysia
-(3) Voice Arabian     (8) Voice Uzbekistan
-(4) Voice Albania     (9) Voice Yaman
-(5) Voice Japan       (10) Voice Brazil 
-(11) Voice Bambara    (12) Voice Basque
-(13) Voice Belanda    (14) Voice BellaRusia
-(15) Voice Bengali    (00) Exit"""
+        (01) Voice Indonesian  (06) Voice Afghanistan
+        (02) Voice English     (07) Voice Malaysia
+        (03) Voice Arabian     (08) Voice Uzbekistan
+        (04) Voice Albania     (09) Voice Yaman
+        (05) Voice Japan       (10) Voice Brazil 
+        (11) Voice Bambara     (12) Voice Basque
+        (13) Voice Belanda     (14) Voice BellaRusia
+        (15) Voice Bengali     (16) Voice Bhojpuri
+        (17) Voice Bosnia      (18) Voice Bulgaria
+        (19) Voice Burma       (20) Voice Cebuano
+        (21) Voice RepCeko     (22) Voice Chicewa
+        (23) Voice Denmark     (24) Voice Divehi
+        (25) Voice Dogri       (26) Voice Esparanto
+        (27) Voice Estonia     (28) Voice Ewe
+        (29) Voice Farsi       (30) Voice Finlandia
+        (00) Exit"""
 def Animation(txt):
     for i in txt:
         st.write(i)
@@ -75,7 +84,7 @@ def colors():
     color_ = [  "\x1b[44;1m",   "\x1b[41;1m",   "\x1b[40;1m"    ]
 def design():
     clear(); colors()
-    rich.print(Panel(Panel(picture(clr,color_),style="on black"),style="on white"))
+    rich.print(Panel(Panel(picture(clr,color_),style="on black"),style="on cyan"))
 class Voice:
     def __init__(self, msg, country) -> str:
         self.coun = country
@@ -92,28 +101,43 @@ class Voice:
         return "sukses to save file " + self.file + "_{self.coun}.mp3"
 def PROGRAMMER_TURU():
     colors(); Animation(f"\n{color_[2]}enter your choice{clr[0]} ")
-    count = input("\t: ")
-    if count == "1": coun = "id"
-    elif count == "2": coun = "en"
-    elif count == "3": coun = "ar"
-    elif count == "4": coun = "al"
-    elif count == "5": coun = "ja"
-    elif count == "6": coun = "af"
-    elif count == "7": coun = "my"
-    elif count == "8": coun = "us"
-    elif count == "9": coun = "ye"
+    count = input(": ")
+    if count == "1" or  "01": coun = "id"
+    elif count == "2" or "02": coun = "en"
+    elif count == "3" or "03": coun = "ar"
+    elif count == "4" or "04": coun = "al"
+    elif count == "5" or "05": coun = "ja"
+    elif count == "6" or "06": coun = "af"
+    elif count == "7" or "07": coun = "my"
+    elif count == "8" or "08": coun = "us"
+    elif count == "9" or "09": coun = "ye"
     elif count == "10": coun = "br"
     elif count == "11": coun = "bm"
     elif count == "12": coun = "eu"
     elif count == "13": coun = "nl"
     elif count == "14": coun = "be"
     elif count == "15": coun = "bn"
+    elif count == "16": coun = "bho"
+    elif count == "17": coun = "bs"
+    elif count == "18": coun = "bg"
+    elif count == "19": coun = "my"
+    elif count == "20": coun = "ceb"
+    elif count == "21": coun = "cs"
+    elif count == "22": coun = "ny"
+    elif count == "23": coun = "da"
+    elif count == "24": coun = "dv"
+    elif count == "25": coun = "doi"
+    elif count == "26": coun = "eo"
+    elif count == "27": coun = "et"
+    elif count == "28": coun = "ee"
+    elif count == "29": coun = "fa"
+    elif count == "30": coun = "fi"
     elif count == "00": exit()
-    Animation(f"{color_[2]}enter the message{clr[0]} ")
-    msg = input("\t: ")
-    x = Voice(msg, coun).voicer(); print ("")
-    rich.print(Panel(x, style="bold yellow"))
-    shell(f"xdg-open voice_{coun}.mp3")
+    Animation(f"\n{color_[2]}enter the message{clr[0]} ")
+    msg = input(": ")
+    x = Voice(msg, coun).voicer();
+    rich.print(Panel(x, style="bold green"))
+    shell(f"xdg-open voice{coun}.mp3")
     def REUSE():
         try:
             y = input(f"{clr[0]}try again?[y/n] ")
@@ -124,6 +148,8 @@ def PROGRAMMER_TURU():
         except KeyboardInterrupt: print ("{}jangan menekan ctrl+c").format(clr[1]); REUSE()
         except EOFError: print ("{}jangan menekan ctrl+d").format(clr[1]);REUSE()
     REUSE()
+      
 if __name__ == "__main__":
     design()  
     PROGRAMMER_TURU()
+    os.system("git pull")
